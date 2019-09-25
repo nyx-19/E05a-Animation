@@ -12,8 +12,9 @@ python -m arcade.examples.move_mouse
 
 import arcade
 
-SCREEN_WIDTH = 640
-SCREEN_HEIGHT = 480
+#sets the desired pixel width and heigh for the screen that apprears
+SCREEN_WIDTH = 640         
+SCREEN_HEIGHT = 480        
 SCREEN_TITLE = "Move Mouse Example"
 
 
@@ -21,11 +22,11 @@ class Ball:
     def __init__(self, position_x, position_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
-        self.position_x = 300
-        self.position_y = 500
+        self.position_x = position_x
+        self.position_y = position_y
         self.radius = radius
         self.color = color
-        #i think to make it an instance variable, it means actually give it a specific value, but i am not sure of that and see no change in the program.
+
     def draw(self):
         """ Draw the balls with the instance variables we have. """
         arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color)
